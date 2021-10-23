@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\led_Blink.obj" 
+TO ".\Objects\led_Blinking" 
+PRINT(".\Listings\led_Blinking.m51") RAMSIZE(256) 

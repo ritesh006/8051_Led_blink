@@ -1,0 +1,81 @@
+C51 COMPILER V9.60.0.0   LED_BLINK                                                         10/23/2021 14:39:34 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE LED_BLINK
+OBJECT MODULE PLACED IN .\Objects\led_Blink.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE led_Blink.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings
+                    -\led_Blink.lst) TABS(2) OBJECT(.\Objects\led_Blink.obj)
+
+line level    source
+
+   1          /* -------------------Project Name--------------------
+   2                              
+   3                              Led Blinking of port P1
+   4                              
+   5            Here we will use P89V51RD2 microcontroller        
+   6           ---------------------------------------------------- */
+   7          
+   8          # include<reg52.h>                        /* Register Header files for registers address */
+   9          
+  10          void ms_delay (unsigned int time );       /* Prototyping of delay function */
+  11          
+  12          
+  13          /* Main start */
+  14          
+  15          void main()
+  16          {
+  17   1          /* While start */
+  18   1          
+  19   1        while(1)
+  20   1          {
+  21   2            P1 = 0xff;              /* set logic 1 to entire port to make led on */
+  22   2              
+  23   2            ms_delay(1000);         /* Calling dealy function for 1 sec */
+  24   2            
+  25   2            P1 = 0x00;              /* set logic 0 to entire port to make led off */
+  26   2            
+  27   2            ms_delay(1000);         /* Calling delay function for 1 sec */
+  28   2            
+  29   2          }
+  30   1          
+  31   1          /* While End */
+  32   1      }
+  33          
+  34          /* Main ends Here */
+  35          
+  36          
+  37          /* Defination of ms_delay function starts */
+  38          
+  39          
+  40          void ms_delay (unsigned int time)
+  41          {
+  42   1        unsigned int i, j;
+  43   1        
+  44   1        /* if we pass time argument equal to 1000 then (time * 1 ms) equal to 1 sec of 
+  45   1           dealy will generate */
+  46   1        
+  47   1      
+  48   1        for (i = 0; i < time; i++)
+  49   1        {
+  50   2          for (j = 0; j < 113; j++)         /* This will generate delay of 1 m.s. */
+  51   2          {
+  52   3          }
+  53   2        }
+  54   1        
+C51 COMPILER V9.60.0.0   LED_BLINK                                                         10/23/2021 14:39:34 PAGE 2   
+
+  55   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     54    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
