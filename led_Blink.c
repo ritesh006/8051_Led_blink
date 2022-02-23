@@ -1,11 +1,11 @@
-/* -------------------Project Name--------------------
-										
-										Led Blinking of port P1
+/* -------------------Project Name-----------------------------------------------------------------------------
+		
+		Led Blinking of port P1
 										
 	Here we will use P89V51RD2 microcontroller 				
- ----------------------------------------------------	*/
+ ----------------------------------------------------------------------------------------------	*/
 
-# include<reg52.h>												/* Register Header files for registers address */
+# include<reg52.h>						/* Register Header files for registers address */
 
 void ms_delay (unsigned int time );				/* Prototyping of delay function */
 
@@ -18,13 +18,13 @@ void main()
 		
 	while(1)
 		{
-			P1 = 0xff;  						/* set logic 1 to entire port to make led on */
+			P1 = 0xff;  			/* set logic 1 to entire port to make led on */
 				
-			ms_delay(1000);					/* Calling dealy function for 1 sec */
+			ms_delay(1000);			/* Calling dealy function for 1 sec */
 			
-			P1 = 0x00;							/* set logic 0 to entire port to make led off */
+			P1 = 0x00;			/* set logic 0 to entire port to make led off */
 			
-			ms_delay(1000);					/* Calling delay function for 1 sec */
+			ms_delay(1000);			/* Calling delay function for 1 sec */
 			
 		}
 		
@@ -47,7 +47,7 @@ void ms_delay (unsigned int time)
 
 	for (i = 0; i < time; i++)
 	{
-		for (j = 0; j < 113; j++)					/* This will generate delay of 1 m.s. */
+		for (j = 0; j < 113; j++)		/* This will generate delay of 1 m.s. */
 		{
 		}
 	}
